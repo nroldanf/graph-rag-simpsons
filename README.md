@@ -48,7 +48,6 @@ graph-rag-simpsons/
 └── images/        # Image assets
 ```
 
-
 ## Setup
 
 ### Python Environment
@@ -196,6 +195,9 @@ uv run jupyter notebook graph_rag.ipynb --port=9990
 # jupyterlab
 uv run jupyterlab notebook graph_rag.ipynb --port=9990
 ```
+
+## Setup
+
 
 ## When & Where
 
