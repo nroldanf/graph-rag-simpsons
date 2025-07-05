@@ -1,2 +1,2 @@
-OLLAMA_EMBEDDING_MODEL: "nomic-embed-text:latest"
+OLLAMA_EMBEDDING_MODEL: "bge-m3:latest"
 OLLAMA_LLM_MODEL: "gemma3n:e4b"

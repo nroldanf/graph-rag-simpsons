@@ -87,13 +87,13 @@ Ollama is an open-source framework for running large language models (LLMs) loca
 Embedding model:
 ```bash
 ollama pull bge-m3:latest
+# smaller model
+ollama pull nomic-embed-text
 ```
 
 LLM model:
 ```bash
 ollama pull gemma3n:e4b
-# or
-ollama pull gemma3n:e2b
 ```
 
 ### Graph (and vector) database configuration
@@ -187,19 +187,10 @@ TODO @Maria
 
 ### GraphRAG
 
-1. Launch [graph_eda notebook](graph_rag/graph_eda.ipynb) by running the following commands in the terminal and follow instructions
+1. Launch [graph_rag notebook](graph_rag/graph_rag.ipynb) by running the following commands in the terminal and follow instructions 
 
 ```bash
-cd graph_rag/
-# jupyter
-uv run jupyter notebook graph_eda.ipynb --port=9999
-# jupyterlab
-uv run jupyterlab notebook graph_eda.ipynb --port=9999
-```
-
-2. Launch [graph_rag notebook](graph_rag/graph_rag.ipynb) by running the following commands in the terminal and follow instructions 
-
-```bash
+cd graph_rag
 # jupyter
 uv run jupyter notebook graph_rag.ipynb --port=9990
 # jupyterlab
