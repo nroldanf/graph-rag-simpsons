@@ -163,26 +163,31 @@ You should see the new instance listed. Don't mind the other too.
 
 You are now ready to start building your RAG and GraphRAG systems!
 
-
-> [!NOTE]
-> For more advanced users, docker can be used to spin up a Neo4j database
-> docker run \
-    -p 7474:7474 -p 7687:7687 \
-    -v $PWD/data:/data -v $PWD/plugins:/plugins \
-    --name neo4j-apoc \
-    -e NEO4J_apoc_export_file_enabled=true \
-    -e NEO4J_apoc_import_file_enabled=true \
-    -e NEO4J_apoc_import_file_use__neo4j__config=true \
-    -e NEO4JLABS_PLUGINS=\[\"apoc\"\] \
-    neo4j:5.26.8
-> From here, you can open the db at http://localhost:7474/. On this page, you will be asked to sign in. Use the default username/password of neo4j and neo4j.
-> Once you login for the first time, you will be asked to change the password.
-
 ## How to run it?
 
 ### Exploratory Analysis of the data
 
-TODO @Maria
+1. Check [basic_eda.ipynb](basic_eda.ipynb) notebook. If you want to run it:
+
+```bash
+# jupyter
+uv run jupyter notebook basic_eda.ipynb --port=9991
+# jupyterlab
+uv run jupyterlab notebook basic_eda.ipynb --port=9991
+```
+
+### RAG
+
+1. Launch [rag notebook](rag/rag_limited.ipynb) by running the following commands in the terminal and follow instructions 
+
+```bash
+cd rag
+# jupyter
+uv run jupyter notebook rag_limited.ipynb --port=9992
+# jupyterlab
+uv run jupyterlab notebook rag_limited.ipynb --port=9992
+
+```
 
 ### GraphRAG
 
@@ -191,13 +196,10 @@ TODO @Maria
 ```bash
 cd graph_rag
 # jupyter
-uv run jupyter notebook graph_rag.ipynb --port=9990
+uv run jupyter notebook graph_rag.ipynb --port=9993
 # jupyterlab
-uv run jupyterlab notebook graph_rag.ipynb --port=9990
+uv run jupyterlab notebook graph_rag.ipynb --port=9993
 ```
-
-## Setup
-
 
 ## When & Where
 
